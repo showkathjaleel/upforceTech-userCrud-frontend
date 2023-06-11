@@ -7,6 +7,7 @@ import Row from "react-bootstrap/esm/Row";
 import { BASE_URL } from "../../api/constants";
 import "./profile.css";
 import { FaEnvelope, FaMobile, FaUser, FaMapMarkerAlt } from "react-icons/fa";
+import defaultProfilePicture from '../../assets/man.png'
 
 const Profile = () => {
   const [userprofile, setUserProfile] = useState({});
@@ -18,7 +19,9 @@ const Profile = () => {
     const response = await fetchUser(id);
 
     if (response.status === 200) {
+      console.log(response.data,'----------------')
       setUserProfile(response.data);
+
     } else {
       console.log("error");
     }
@@ -41,8 +44,9 @@ const Profile = () => {
               <Row>
                 <div className="col">
                   <div className="card-profile-stats pl-10">
-                    <img
-                      src={`${BASE_URL}/uploads/${userprofile.profileImg}`}
+                    <img className="w-40 h-34"
+                      //src={`${BASE_URL}/uploads/${userprofile.profileImg}`}
+                      src={userprofile.profileImg ? userprofile.profileImg : defaultProfilePicture}
                       alt=""
                     />
                   </div>

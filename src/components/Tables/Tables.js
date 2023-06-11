@@ -51,10 +51,11 @@ const Tables = ({
                       <td>{element.email}</td>
                       <td>{element.gender === "Male" ? "M" : "F"}</td>
                       <td className="img_parent">
-                        <img
+                        <img className="h-12 "
                           src={
                             element.profileImg
-                              ? `${BASE_URL}/uploads/${element.profileImg}`
+                              // ? `${BASE_URL}/uploads/${element.profileImg}`
+                              ? element.profileImg
                               : defaultProfilePicture
                           }
                           alt="img"
