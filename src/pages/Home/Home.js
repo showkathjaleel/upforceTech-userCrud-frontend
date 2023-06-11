@@ -127,13 +127,13 @@ const Home = () => {
   };
   return (
     <>
-      {userAdd ? (
+      {/* {userAdd ? (
         <Alert variant="success" onClose={() => setUserAdd("")} dismissible>
           {userAdd.fname.toUpperCase()} Succesfully Added
         </Alert>
       ) : (
         ""
-      )}
+      )} */}
 
       {userEdit ? (
         <Alert variant="primary" onClose={() => setUserEdit("")} dismissible>
@@ -143,13 +143,13 @@ const Home = () => {
         ""
       )}
 
-      {userDelete ? (
+      {/* {userDelete ? (
         <Alert variant="danger" onClose={() => setUserDelete("")} dismissible>
           {userDelete.fname.toUpperCase()} Succesfully Delete
         </Alert>
       ) : (
         ""
-      )}
+      )} */}
       <div className="container">
         <div className="main_div">
           {/* search add btn */}
