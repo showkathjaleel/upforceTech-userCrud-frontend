@@ -22,6 +22,8 @@ const Tables = ({
   pageCount,
   setPage,
 }) => {
+
+  console.log(userdata,'userdataaaaaaaaaaaaaaaaaaa')
   const handleDelete = (id) => {
     deleteUser(id);
   };
@@ -53,9 +55,9 @@ const Tables = ({
                       <td className="img_parent">
                         <img className="h-12 "
                           src={
-                            element.profileImg
+                            element?.profileImg
                               // ? `${BASE_URL}/uploads/${element.profileImg}`
-                              ? element.profileImg
+                              ? element?.profileImg
                               : defaultProfilePicture
                           }
                           alt="img"
